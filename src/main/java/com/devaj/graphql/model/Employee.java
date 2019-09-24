@@ -8,7 +8,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Getter
@@ -31,6 +33,13 @@ public class Employee {
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate birth;
 
-    @OneToMany
-    private List<Project> projectList;
+    @OneToMany(mappedBy = "employee", fetch = FetchType.EAGER)
+    private List<Project> projectList = new ArrayList<>();
+
+    public Employee(String name, Integer age, LocalDate birth) {
+        this.name = name;
+        this.age = age;
+        this.birth = birth;
+    }
+
 }

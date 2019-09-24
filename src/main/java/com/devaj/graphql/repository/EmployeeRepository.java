@@ -1,4 +1,7 @@
 package com.devaj.graphql.repository;
 
-public interface EmployeeRepository {
+import com.devaj.graphql.model.Employee;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 }

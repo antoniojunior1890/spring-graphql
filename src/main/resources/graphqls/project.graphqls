@@ -1,0 +1,8 @@
+type Project {
+    id: ID
+    name: String
+    serviceCode: Int
+    responsible: String
+    deadline: String
+#    projectList: [Project]
+}

@@ -1,5 +1,6 @@
 package com.devaj.graphql.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,6 +9,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Entity
 @Getter
@@ -34,6 +36,8 @@ public class Project {
     private LocalDate deadline;
 
     @ManyToOne
+    @Getter(onMethod = @__( @JsonIgnore))
     @JoinColumn(name = "employee_id", nullable = false, updatable = false)
     private Employee employee;
+
 }

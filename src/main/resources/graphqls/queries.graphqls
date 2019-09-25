@@ -4,6 +4,7 @@ type Query {
 }
 
 type Mutation {
+#    createEmployee(name: String, age: Int, birth: LocalDate): Employee
     createEmployee(employee: EmployeeInput): Employee
 #    createAuthor(author: AuthorInput): Author
 }

@@ -1,15 +1,15 @@
-scalar LocalDate
+#scalar LocalDate
 
 type Employee {
     id: ID
     name: String
     age: Int
-    birth: LocalDate
+    birth: String
     projectList: [Project]
 }
 
 input EmployeeInput {
     name: String
     age: Int
-    birth: LocalDate
+    birth: String
 }

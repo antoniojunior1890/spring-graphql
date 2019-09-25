@@ -3,11 +3,9 @@ package com.devaj.graphql.controller;
 import com.devaj.graphql.model.Employee;
 import com.devaj.graphql.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController

@@ -24,4 +24,8 @@ public class EmployeeGraphQL implements GraphQLMutationResolver, GraphQLQueryRes
     public Employee createEmployee(EmployeeSavedto employeeSavedto) {
         return employeeRepository.save(employeeSavedto.transformToEmployee());
     }
+
+    public Employee getEmployeeById(Long aLong){
+        return employeeRepository.findById(aLong).get();
+    }
 }

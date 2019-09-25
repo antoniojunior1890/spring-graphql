@@ -1,6 +1,7 @@
 type Query {
     getEmployees: [Employee]
     getProjects: [Project]
+    getEmployeeById(id: ID): Employee
 }
 
 type Mutation {
